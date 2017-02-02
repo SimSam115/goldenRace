@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "goldenRace1.1.CSharp", "goldenRace1.1.CSharp.csproj", "{37B697BF-7D3F-42E4-1548-1E48DB7F815F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "goldenRace1.1.CSharp.Editor", "goldenRace1.1.CSharp.Editor.csproj", "{89B64A59-F55B-F380-6DD8-99C476E0B982}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{37B697BF-7D3F-42E4-1548-1E48DB7F815F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37B697BF-7D3F-42E4-1548-1E48DB7F815F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37B697BF-7D3F-42E4-1548-1E48DB7F815F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37B697BF-7D3F-42E4-1548-1E48DB7F815F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89B64A59-F55B-F380-6DD8-99C476E0B982}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89B64A59-F55B-F380-6DD8-99C476E0B982}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89B64A59-F55B-F380-6DD8-99C476E0B982}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89B64A59-F55B-F380-6DD8-99C476E0B982}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
