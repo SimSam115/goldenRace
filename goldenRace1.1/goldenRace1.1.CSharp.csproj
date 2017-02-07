@@ -16,9 +16,8 @@
     <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
-    <UnityVersion>5.5.1f1</UnityVersion>
+    <UnityVersion>5.5.1p2</UnityVersion>
     <RootNamespace></RootNamespace>
-    <LangVersion Condition=" '$(VisualStudioVersion)' != '10.0' ">4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -91,17 +90,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Abilities\Placement.cs" />
+    <Compile Include="Assets\Camera\cameraFollow.cs" />
+    <Compile Include="Assets\Enviornment\scoreRewarder.cs" />
     <Compile Include="Assets\Player\carScript.cs" />
+    <Compile Include="Assets\Player\playerBasedDepth.cs" />
+    <Compile Include="Assets\Player\playerCollision.cs" />
     <Compile Include="Assets\Player\playerController.cs" />
-    <Compile Include="Assets\Player\playerMovement.cs" />
+    <Compile Include="Assets\Player\scoreScript.cs" />
     <Compile Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\CameraControls.cs" />
     <Compile Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\IcoBumpin.cs" />
     <Compile Include="Assets\ProCore\ProBuilder\API Examples\Misc\HueCube.cs" />
     <Compile Include="Assets\ProCore\ProBuilder\API Examples\Procedural Mesh\ExtrudeRandomEdges.cs" />
     <Compile Include="Assets\ProCore\ProBuilder\API Examples\Runtime Editing\RuntimeEdit.cs" />
     <Compile Include="Assets\ProCore\ProBuilder\API Examples\Vertex Colors\HighlightNearestFace.cs" />
-    <Compile Include="Assets\cameraFollow.cs" />
-    <Compile Include="Assets\playerCollision.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\README.txt" />
