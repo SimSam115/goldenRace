@@ -3,22 +3,38 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class playerBasedDepth : MonoBehaviour {
-    SpriteRenderer sprite, thisSprite;
-    Collider col, playerCol;
+    SpriteRenderer sprite;
+    bool behind = false;
 	// Use this for initialization
 	void Start () {
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        playerCol = player.transform.FindChild("collider").GetComponent<Collider>();
-        sprite = player.transform.FindChild("sprite").GetComponent<SpriteRenderer>();
-        thisSprite = transform.FindChild("sprite").GetComponent<SpriteRenderer>();
-        col = transform.FindChild("collider").GetComponent<Collider>();
+        sprite = transform.FindChild("sprite").GetComponent<SpriteRenderer>();
     }
 	
 	// Update is called once per frame
 	void Update () {
-        if(col.bounds.Intersects(playerCol.bounds))
-        {
-            sprite.sortingOrder = thisSprite.sortingOrder + 1;
-        }
+
 	}
+    void OnTriggerStay(Collider other)
+    {
+        if(other.gameObject.name == "backwallCollider")
+        {
+            behind = true;
+            sprite.sortingOrder = other.transform.parent.transform.FindChild("sprite").GetComponent<SpriteRenderer>().sortingOrder - 10;
+        }
+    }
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.name == "backwallCollider")
+        {
+            behind = false;
+            sprite.sortingOrder = other.transform.parent.transform.FindChild("sprite").GetComponent<SpriteRenderer>().sortingOrder - 10;
+        }
+    }
+    void OnCollisionEnter(Collision other)
+    {
+        if (!behind)
+        {
+            sprite.sortingOrder = other.transform.parent.transform.FindChild("sprite").GetComponent<SpriteRenderer>().sortingOrder + 10;
+        }
+    }
 }
