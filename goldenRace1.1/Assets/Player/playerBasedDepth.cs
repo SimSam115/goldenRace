@@ -3,28 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class playerBasedDepth : MonoBehaviour {
-    Transform playerPos;
-    SpriteRenderer sprite;
+    SpriteRenderer sprite, thisSprite;
     Collider col, playerCol;
 	// Use this for initialization
 	void Start () {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
-        playerPos = player.transform;
         playerCol = player.transform.FindChild("collider").GetComponent<Collider>();
-        sprite = transform.FindChild("sprite").GetComponent<SpriteRenderer>();
-        col = transform.FindChild("depthCollider").GetComponent<Collider>();
+        sprite = player.transform.FindChild("sprite").GetComponent<SpriteRenderer>();
+        thisSprite = transform.FindChild("sprite").GetComponent<SpriteRenderer>();
+        col = transform.FindChild("collider").GetComponent<Collider>();
     }
 	
 	// Update is called once per frame
 	void Update () {
         if(col.bounds.Intersects(playerCol.bounds))
         {
-            sprite.sortingOrder = -10;
-            Debug.Log("R");
-        }
-        else
-        {
-            sprite.sortingOrder = 10;
+            sprite.sortingOrder = thisSprite.sortingOrder + 1;
         }
 	}
 }
